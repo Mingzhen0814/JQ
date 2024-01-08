@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <h4>jQuery()</h4>
+    <p><a href="https://api.jquery.com/jQuery/">https://api.jquery.com/jQuery/</a></p>
+    <h4>jQuery Selectors</h4>
+    <p><a href="https://www.w3schools.com/jquery/jquery_ref_selectors.asp">https://www.w3schools.com/jquery/jquery_ref_selectors.asp</a></p>
+
+    <hr>
+
+    <h4>利用CSS樣式選擇器選擇元素</h4>
+    <ul id="myList">
+        <li>標籤</li>
+        <li>屬性(#id)</li>
+        <li>類別(.class)</li>
+        <li>其他</li>
+    </ul>
+
+    <h4>jQuery函式庫可以做什麼？</h4>
+    <ul>
+        <li>尋找元素</li>
+        <li>變更DOM</li>
+        <li>掛載事件</li>
+        <li>其他</li>
+    </ul>
+    <input type="button" value="皮卡丘">
+
+    <script>
+        // 10. 挑選 h4 標籤
+        var h4Tag = $("h4");
+        console.log(h4Tag); // jQuery.fn.init {0: h4, 1: h4, 2: h4, 3: h4, length: 4, prevObject: j…y.fn.init}
+        console.log(h4Tag.length); // 4
+        
+        // 20. 透過 #myList 選擇 ul 標籤
+        var ulTag = $("#myList");
+        console.log(ulTag); // jQuery.fn.init {0: ul#myList, length: 1}
+        console.log(ulTag.length); // 1
+        
+        // 30. 挑選 li 標籤
+        var liTag = $("li");
+        console.log(liTag); // jQuery.fn.init {0: li, 1: li, 2: li, 3: li, 4: li, 5: li, 6: li, 7: li, length: 8, prevObject: j…y.fn.init}
+        console.log(liTag.length); // 8
+
+        // 60. jQuery 函式庫是否有針對 <input> 提供特殊的選擇方式？
+        var buttonElement = $(":button");
+        console.log(buttonElement); // jQuery.fn.init {0: input, length: 1, prevObject: j…y.fn.init}
+    </script>
+
+</body>
+
+</html>

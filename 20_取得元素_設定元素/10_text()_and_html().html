@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <p>請點選登入</p>
+    <button id="btnLogin">登入</button>
+
+    <script>
+
+        btnLogin.onclick = function () {
+
+            // 10. 取得 p 元素的內容
+            var pElement = $("p").text();
+            console.log(pElement);
+
+            // 20. 設定 p 元素的內容
+            // $("p").text("字串");
+            // $("p").text(123);
+            // $("p").text(true);
+            // $("p").text("<i>HTML字串</i>");
+
+            // 30. 比較 $().text() 和 $().html() 的差異
+            // $("p").html("字串");
+            // $("p").html(123);
+            // $("p").html(true);
+            $("p").html("<i>HTML字串</i>");
+        }
+    </script>
+
+</body>
+
+</html>

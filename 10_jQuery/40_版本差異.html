@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 10. 觀察控制台訊息 -->
+    <!-- 測試開始 -->
+    <!-- 3 -->
+    <!-- 測試結束 -->
+    <!-- <script src="../_js/jquery-1.12.4.js"></script> -->
+
+    <!-- 20. 註解上一個 js 的引用，改為底下 3.6.0 版本 -->
+    <!-- 觀察控制台訊息 -->
+    <!-- 測試開始 -->
+    <!-- Uncaught TypeError: $(...).size is not a function -->
+    <script src="../_js/jquery-3.6.0.js"></script>
+
+    <!-- 30. 保留 3.6.0 版本，再增加 migrate-1.4.1.js -->
+    <!-- 測試開始 -->
+    <!-- JQMIGRATE: jQuery.fn.size() is deprecated; use the .length property -->
+    <!-- └> 3.6.0版本沒有.size()需改成.length -->
+    <!-- 3 -->
+    <!-- 測試結束 -->
+    <script src="../_js/jquery-migrate-1.4.1.js"></script>
+
+
+    <!-- 1. 「不可以」進去公司就把所有的函式庫元件更新
+    2.如果是因為專需求要「翻新」->jquery-migrate-1.4.1.js -->
+</head>
+
+<body>
+
+    <h4>jQuery Migrate Plugin</h4>
+    <a href="https://jquery.com/download/#jquery-migrate-plugin">https://jquery.com/download/#jquery-migrate-plugin</a>
+
+    <hr>
+
+    <p>a</p>
+    <p>b</p>
+    <p>c</p>
+
+    <script>
+        console.log("測試開始");
+        console.log($('p').size());
+        console.log("測試結束");
+    </script>
+
+</body>
+
+</html>
