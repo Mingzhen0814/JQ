@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <p>v8: 該如何在console顯示「皮卡丘」字串？</p>
+    <p>請根據第16行程式碼進行反推</p>
+    <script>
+        // 和前面幾個「使用函式」範例不同，這裡請進行撰寫的動作
+        function a() {
+            return {
+                b: function () {
+                    console.log("皮卡丘")
+                }
+            }
+        }
+
+        // 目標: 希望底下這一行執行完 console 就有皮卡丘字串
+        a().b();
+        /* a函式.(的)某物件
+           某物件包含了一個函式叫做b
+           呼叫執行某物件的b函式
+        */
+
+        /* a()
+            1. function a(){}
+            2. 參數: N
+            3. 回傳: Y -> a()後面的.
+                資料型態: 物件(.)
+            4. 要做什麼: console.log()
+        */
+    </script>
+    <pre>
+        $(this).hide()
+        $函式呼叫執行後回傳某物件並傳入this
+        某物件包含了一個函式叫做hide
+        呼叫執行某物件的hide函式
+    </pre>
+</body>
+
+</html>
