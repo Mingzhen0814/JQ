@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/40_events.css">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <!-- 10. 顯示資訊的地方 -->
+    <h5 id="demo">Hello!</h5> <hr>
+    <div id="game"></div> <hr>
+    <ul>
+        <li>Apple</li>
+        <li>Bee</li>
+        <li>Cat</li>
+        <li>Dog</li>
+    </ul>
+
+    <script>
+
+        // 20. 透過事件監聽而產生的 "事件物件"
+        //   * 點選 div 帶入座標
+        $('#game').on('click',function(eventObject){
+            $('#demo').text(`x: ${eventObject.offsetX}, y: ${eventObject.offsetY}`)
+            // console.log(eventObject.offsetX);
+            // console.log(eventObject.offsetY);
+        })
+
+        // 30. 同時設定兩個事件在 <li> 元素上
+        //   * click 和 mouseover
+        $('li').on('click mouseover', function(){
+            console.log('touch!');
+        })
+    </script>
+
+</body>
+
+</html>

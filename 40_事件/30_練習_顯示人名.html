@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+    <!-- 10. 參考結果設定對應 css -->
+</head>
+
+<body>
+    <!-- 20. 設定div袋子，裡面裝一張圖片和一段文字 -->
+    <div>
+        <img id="pic" src="../_img/character.jpg">
+        <p style="width: 355px;"></p>
+    </div>
+    <script>
+        $(function () {
+            // 30. 參考執行結果，條列所需的 樣式以及事件
+
+            $('#pic').on('mousemove', function (eventObject) {
+                if (eventObject.offsetX < (355 / 3)) {
+                    $('p').text("魯夫");
+                    $('p').css('text-align', 'left')
+                } else if (eventObject.offsetX < (355 * 2 / 3)) {
+                    $('p').text("索隆");
+                    $('p').css('text-align', 'center')
+                } else {
+                    $('p').text("娜美");
+                    $('p').css('text-align', 'right')
+                }
+            })
+            $('#pic').on('mouseout', function (eventObject){
+                $('p').text("");
+            })
+
+        });
+    </script>
+</body>
+
+</html>

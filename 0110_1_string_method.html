@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cat = "貓咪大戰爭";
+        // input: cat(->string)
+        // process: substring(0,4)
+        // output: (->string)
+        var apple = cat.substring(0,4);
+        console.log(apple);
+        // input: apple(->string)
+        // process: padStart(7, "#")
+        // output: (->string)
+        var bee = apple.padStart(7, "#");
+        console.log(bee);
+        //-----------------
+        // 鏈式呼叫[可折行](物件導向，在一個物件上連續呼叫不同方法，且不使用變數儲存中間結果)
+        console.log( 
+            cat
+            .substring(0,4)
+            .padStart(7, "#") 
+            );
+    </script>
+</body>
+</html>

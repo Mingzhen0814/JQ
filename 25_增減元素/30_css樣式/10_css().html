@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/30_cssstyle.css">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <h1></h1>
+    <h4 id="apple">.css()</h4>
+    <p><a href='https://api.jquery.com/css/'>https://api.jquery.com/css/</a></p>
+
+    <hr>
+
+    <p id="p1">Apple</p>
+    <p id="p2">Bee</p>
+    <p id="p3">Cat</p>
+    <p id="p4">Dog</p>
+    <p id="p5">Egg</p>
+
+    <script>
+        $(function () {
+
+            // 10. 取得 #p1 標籤的文字顏色
+            var fontColor = $('#p1').css('color');
+            console.log(fontColor); // rgb(0, 0, 0)
+
+            // 20. 設定 #p2 標籤的文字顏色
+            $('#p2').css('color', 'red');
+            $('#p3').css('color', 'rgb(255, 0, 0)');
+
+            $('#p4').css({
+                'color': 'yellow',
+                'font-weight': 'bolder',
+                'font-size': '64px'
+            })
+
+            $('#p5').css({
+                color: 'green',
+                fontWeight: 'bolder',
+                fontSize: '64px'
+            })
+
+            // 30. 取得 h4 標籤的 id
+            var h1Prop = $('h1').prop('id');
+            var h4Prop = $('h4').prop('id');
+            console.log(h1Prop); //  
+            console.log(h4Prop); // apple
+
+            var h1Attr = $('h1').attr('id');
+            var h4Attr = $('h4').attr('id');
+            console.log(h1Attr); // undefined
+            console.log(h4Attr); // apple
+
+            // 40. 設定 h1 標籤的 id 
+            //      * 和 $().css() 無關，複習 + 討論先前曾使用過的 function
+            var h1Prop = $('h1').prop('id', 'bee');
+            console.log(h1Prop); // bee
+
+            // 50. $().css() 其他型態的參數
+            //  * 15_練習_點選改變字型大小.html 練習後回來補充說明
+            $('p').css('background-color', 'pink');
+            $('p').css('width', function (index, propValue) {
+                // console.log(index, propValue);
+
+                if (index == 0 || index > 3) {
+                    return '300px';
+                } else {
+                    return (index * 50) + 'px';
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

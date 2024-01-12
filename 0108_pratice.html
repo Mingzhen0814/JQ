@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="button"]{
+            color: red;
+        }
+        :button{
+            background-color: aquamarine;
+            /* 在CSS中button不是虛擬類別 */
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="皮卡丘">
+    <input type="submit">
+    <script src="./_js/jquery-3.6.0.js"></script>
+    <script>
+        // var buttonElement = $('input[type="button"]');
+        var buttonElement = $(":button");
+        console.log(buttonElement); // jQuery.fn.init {0: input, length: 1, prevObject: j…y.fn.init}
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+   
+
+    <label for="userName">文字輸入方框:</label>
+    <input id="userName" type="text" value="手機"><br><br>
+    <button id="btnDemo">測試 $().prop() 和 $().attr() </button>
+    <hr>
+    
+    <div>
+        <h4>測試區域:</h4>
+        <p> 測試 prop ===><span id="testProp"> </span></p>
+        <p> 測試 attr ===><span id="testAttr"> </span></p>
+    </div>
+    <pre>
+        prop(): (property)  抓取使用者(當前?現在?最新?)輸入的資料
+        attr(): (attribute) 抓取開始標籤裡面的元素屬性值(一開始?預設?)
+    </pre>
+    <script>
+        // 10. 先回憶如何控制畫面上元素，例如：改變元素內容
+        // 20. 點選按鈕後，透過 $().prop() 和 $().attr() 等兩種方法取得 #userName 的值
+        btnDemo.onclick = function(){
+            testProp.innerText = $('#userName').prop('value');
+            testAttr.innerText = $('#userName').attr('value');
+        }
+    </script>
+
+</body>
+
+</html>

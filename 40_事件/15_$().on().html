@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+   
+    <h3>Hello!</h3>
+    <h3>Hello!</h3>
+    <h3>Hello!</h3>
+    <h3>Hello!</h3>
+    <h3>Hello!</h3>
+    <h3>Hello!</h3>
+    
+    <script>
+
+        // 10. 透過 $().on() 掛載 click 事件到 h3
+        //   * click 後改變 h3 的內容
+        
+        // version 1
+        /* $('h3').on('click', function(){
+
+            $(this).html("皮卡丘"); // 點到哪一個h3，哪一個h3就會被改變
+            $('h3').html("皮卡丘"); // 點擊一個h3，全部的h3都會被改變
+        })*/
+
+
+
+        //version 2
+        $('h3').click(function(){
+            $(this).html("皮卡丘");
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <button id="btnAdd">附加清單</button>
+    <hr>
+    <div>
+        <h4>底下是清單</h4>
+        <ol id="shop">
+            <li>迷客夏</li>
+            <li>50嵐</li>
+            <li id="can">可不可熟成紅茶</li>
+        </ol>
+    </div>
+
+    <script>
+        
+        btnAdd.onclick = function () {
+            
+          // 10. 測試 + 比較底下幾種方法的差異:
+          //    $().before()
+          $('#shop').before('before()');
+          $('#can').before('before()2');
+
+          //    $().after()
+          $('#shop').after('after()');
+          $('#can').after('after()2');
+
+          //    $().prepend() 
+          $('#shop').prepend('prepend()');
+
+          //    $().append() -> 在(地)加入(物)
+          $('#shop').append('append()');
+
+          //    $().appendTo() ->把(物)加到(地)
+          $('<p>appendTo()</p>').appendTo('#shop');
+            
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .s1 {
+            background-color: lightblue;
+        }
+
+        .s1 .s2 {
+            background-color: lightcoral;
+        }
+
+        .s1.s2 {
+            background-color: lightgreen;
+        }
+        /* class="s1.s2" */
+        .s1\.s2 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+        \在CSS裡面的輔助說明文件
+        https://developer.mozilla.org/zh-TW/docs/Web/API/Document/querySelector#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85
+
+        *如果可以維持命名「不要」用符號+數字出現在「後面」的話，就太好了
+    </pre>
+
+
+
+
+    <!-- 標籤不限僅僅測試class -->
+
+    <!-- .s1: 某個元素的class屬性值為s1 -->
+    <p class="s1">測試1</p>
+
+    <!-- .s1 .s2: 
+        某個元素的class屬性值為s1
+        某個元素的裡面(空格)
+        另外一個元素class屬性值為s2
+    -->
+    <div class="s1">
+        <h3 class="s2">測試2</h3>
+    </div>
+
+    <!-- .s1.s2: 
+        某個元素的class屬性值為s1
+        (元素相同?)class屬性值為s2
+    -->
+    <h1 class="s1 s2">測試3</h1>
+
+    <h1 class="s1.s2">測試4</h1>
+</body>
+
+</html>

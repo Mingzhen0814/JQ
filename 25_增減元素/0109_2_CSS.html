@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <pre>
+        text()
+        有一個函式
+        1. 如果沒有參數|資料的傳入，那函式會回傳特定元素的內容
+        2. 如果有參數|資料的傳入，那函式會幫我設定特定的元素內容
+        我們應該也可以創造出類似的函式出來吧?
+ 
+        目標：創造一個類似的函式
+        1. 函式名稱: myText
+        2. 函式做什麼: 如果使用者呼叫 myText 的時候
+            -> 有傳入資料，我就去設定 #apple
+            -> 沒有傳入資料，我就去取得 #apple 的內容並且回傳給使用者
+        
+        參數: 一個參數
+        回傳: 看情況需要
+        要做什麼: 判斷
+    </pre>
+
+    <h1 id="apple">皮卡丘</h1>
+    <script>
+
+        // 參數名稱叫做什麼其實都沒關係
+        // 目標: 盡量讓「名稱」有意義
+        //     (相較於 x 我認為 elementContent 更可以表達收到的是什麼)
+
+        function myText(elementContent) {
+            // version 1
+            // if (elementContent == undefined) {
+            //     // 如果使用者沒有給我資料的話/我沒收到使用者的資料
+            //     // 取得 #apple的內容並且回傳給使用者
+            //     var h1Text = document.getElementById('apple').innerText;
+            //     return h1Text
+            // } else {
+            //     // 使用者有給我資料的話/我收到使用者的資料
+            //     // 設定 #apple
+            //     document.getElementById('apple').innerText = elementContent;
+            // }
+
+
+
+            // version 2
+            // var h1Text;
+            // if (elementContent == undefined) {
+            //     // 如果使用者沒有給我資料的話/我沒收到使用者的資料
+            //     // 取得 #apple的內容並且回傳給使用者
+            //     var h1Text = document.getElementById('apple').innerText;
+            // } else {
+            //     document.getElementById('apple').innerText = elementContent;
+            // }
+            // return h1Text;
+
+
+
+            // version 3 -> 三元運算子 -> (condition)? if true do : if false do
+            return (elementContent == undefined)? 
+            document.getElementById('apple').innerText :
+            document.getElementById('apple').innerText = elementContent;
+        }
+
+        myText("胖丁"); // 我就去設定 #apple
+        // var data = myText();       // elementContent == undefined -> 我就去我就去取得 #apple 的內容並且回傳給使用者
+        // console.log(data);
+    </script>
+</body>
+
+</html>

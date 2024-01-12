@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <pre>
+        某些HTML標籤的屬性，只要存在就有(效力?意義?)
+        * 大部分的HTML標籤的屬性，都需要透過 = 去設定
+        例如: checked="false"仍會勾選
+    </pre>
+    <input type="checkbox">我同意接受網站的促銷訊息
+    <script>
+        // 10. 透過 $().prop() 和 $().attr()
+        //     取得 <input type="checkbox"> 元素 的 checked 屬性
+        var x = $(':checkbox').prop('checked');
+        var y = $(':checkbox').attr('checked');
+        console.log(x);        // 勾選:true     不勾選:false
+        console.log(typeof x); // 勾選:boolean  不勾選:boolean
+        console.log(y);        // 勾選:checked  不勾選:undefined
+        console.log(typeof y); // 勾選:string   不勾選:undefined
+
+        $(':checkbox').prop('checked', true);
+    </script>
+
+</body>
+
+</html>

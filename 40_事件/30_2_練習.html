@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+    <!-- 10. 參考結果設定對應 css -->
+    <style>
+        div {
+            float: left
+        }
+
+
+        /* version 3 */
+        .apple{
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 20. 設定袋子，裡面裝一張圖片和一段文字 -->
+    <header class="father">
+        <div><img id="img1" src="../_img/find.png">
+            <p id="imgs1">放大鏡</p>
+        </div>
+        <div><img id="img2" src="../_img/like.png">
+            <p id="imgs2">讚</p>
+        </div>
+        <div><img id="img3" src="../_img/notification.png">
+            <p id="imgs3">鈴鐺</p>
+        </div>
+    </header>
+
+
+    <script>
+        $(function () {
+            // 30. 參考執行結果，條列所需的 樣式以及事件
+            //看不到 - visibility
+            //出現   -
+            //事件:滑鼠在圖上經過
+
+
+            $('p').css('visibility', "hidden");
+            // version 1
+
+            /* $('div').on('mousemove', function () {
+                $(this).find("p").css('visibility', 'visible');
+            })
+            $('div').on('mouseout', function () {
+                $(this).find("p").css('visibility', 'hidden');
+            }) */
+
+
+            // version 2
+            /* $('div').on({
+                'mouseenter': function(){
+                    $(this).find('p').css('visibility','visible');
+                },
+                'mouseleave': function(){
+                    $(this).find('p').css('visibility','hidden');
+                },
+            }) */
+
+            // version 3
+            $('p').addClass('apple');
+            $('div').hover(function(){
+                // toggleClass: 在狀態間切換，如果當前有這個class就移除/沒有這個class就添加
+                $(this).find('p').toggleClass('apple')
+            })
+
+        });
+    </script>
+</body>
+
+</html>
